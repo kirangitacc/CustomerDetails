@@ -1,0 +1,79 @@
+.customer-details-container {
+  height: 85vh;
+  background-color: #f0f2f5;
+  box-sizing: border-box;
+  border:5px solid lightsalmon;
+  padding: 20px;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  overflow-y: scroll;
+}
+
+.customer-card {
+  background-color: #fff;
+  padding: 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.customer-card h2 {
+  font-size: 1.6rem;
+  margin-bottom: 1rem;
+  color: #333;
+}
+
+.customer-card p {
+  margin: 0.5rem 0;
+  font-size: 1rem;
+  color: #555;
+}
+
+.customer-card h3 {
+  margin-top: 1.5rem;
+  font-size: 1.2rem;
+  color: #007bff;
+}
+
+.customer-card ul {
+  list-style: none;
+  padding: 0;
+  margin-top: 0.5rem;
+}
+
+.customer-card ul li {
+  background-color: #f8f9fa;
+  padding: 0.5rem;
+  margin-bottom: 0.5rem;
+  border-left: 4px solid #007bff;
+  border-radius: 4px;
+}
+
+.actions {
+  margin-top: 1.5rem;
+  display: flex;
+  gap: 1rem;
+}
+
+.actions button {
+  padding: 0.5rem 1rem;
+  border: none;
+  font-weight: bold;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.actions button:first-child {
+  background-color: #ffc107;
+  color: #000;
+}
+
+.actions button:last-child {
+  background-color: #dc3545;
+  color: #fff;
+}
+
+.actions button:hover {
+  opacity: 0.9;
+}

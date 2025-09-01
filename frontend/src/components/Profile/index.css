@@ -1,0 +1,129 @@
+
+.profile-cardu {
+  height: 85vh; 
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: #f0f4f8;
+  padding: 15px;
+  box-sizing: border-box;
+  overflow-y: auto;
+  min-width:100vw;
+  border: 5px solid lightsalmon;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+
+.profile-cardu h2 {
+  font-size: 1.8rem;
+  color: #2d3436;
+  margin-bottom: 1rem;
+}
+
+.profile-avataru {
+  width: 80px;
+  height: 80px;
+  background-color: #0984e3;
+  color: white;
+  font-size: 2.5rem;
+  font-weight: bold;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1.5rem;
+}
+
+.profile-detailsu {
+  width: 100%;
+  max-width: 400px;
+  background-color: #fff;
+  padding: 1rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  margin-bottom: 2rem;
+}
+
+
+.profile-rowu {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 12px;
+  font-size: 1rem;
+  color: #2d3436;
+}
+
+.profile-rowu label {
+  font-weight: bold;
+  color: #636e72;
+}
+
+.button-containeru {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.logout-btnu,
+.home-btnu {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 6px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.logout-btnu {
+  background-color: #d63031;
+  color: white;
+}
+
+.logout-btn:hover {
+  background-color: #c0392b;
+}
+
+.home-btnu {
+  background-color: #00b894;
+  color: white;
+}
+
+.home-btn:hover {
+  background-color: #019875;
+}
+
+.loadingu,
+.erroru {
+  height: 90vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2rem;
+  color: #636e72;
+}
+
+
+@media (max-width: 768px) {
+  .profile-cardu {
+    padding: 1rem;
+    height: 85vh;
+  }
+
+  .profile-detailsu {
+    width: 90%;
+    padding: 0.8rem;
+  }
+
+  .profile-rowu {
+    flex-direction: column;
+    align-items: center;
+    gap: 4px;
+  }
+
+  .logout-btnu,
+  .home-btnu {
+    width: 100%;
+    font-size: 0.95rem;
+  }
+}
