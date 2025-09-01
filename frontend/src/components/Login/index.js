@@ -24,8 +24,10 @@ const Login = () => {
       });
 
       const data = await response.json();
+      console.log(response)
+      console.log(data)
 
-      if (!response.ok) throw new Error(data.message || 'Login failed');
+      if (!response.ok) throw new Error(data || 'Login failed');
 
       localStorage.setItem('token', data.jwtToken);
 
