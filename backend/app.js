@@ -98,10 +98,10 @@ app.post('/login',async (req, res) => {
   const { email, password } = req.body;
   console.log(req.body)
   const user = await db.get(`SELECT * FROM userdetails WHERE email = ?`, [email]);
-  if (!user) return res.status(400).send('Invalid user');
+  if (!user) return res.status(400).json('Invalid user');
 
   const isValid = await bcrypt.compare(password, user.password);
-  if (!isValid) return res.status(400).send('Invalid password');
+  if (!isValid) return res.status(400).json('Invalid password');
 
   const jwtToken = jwt.sign({ userId: user.id }, 'MY_SECRET_TOKEN');
   console.log(jwtToken)
