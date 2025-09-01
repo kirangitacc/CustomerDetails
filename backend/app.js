@@ -119,7 +119,7 @@ app.get('/user/:id', tokenAuthentication, async (req, res) => {
 app.post('/customers', tokenAuthentication, async (req, res) => {
   const { first_name, last_name, phone, email, addresses } = req.body;
   if (!first_name || !last_name || !phone) {
-    return res.status(400).send('Missing required fields');
+    return res.status(400).json('Missing required fields');
   }
 
   const result = await db.run(
@@ -147,7 +147,7 @@ app.post('/customers', tokenAuthentication, async (req, res) => {
 // 📄 Get Customer Details
 app.get('/customers/:id', tokenAuthentication, async (req, res) => {
   const customer = await db.get(`SELECT * FROM customers WHERE id = ?`, [req.params.id]);
-  if (!customer) return res.status(404).send('Customer not found');
+  if (!customer) return res.status(404).json('Customer not found');
 
   const addresses = await db.all(`SELECT * FROM addresses WHERE customer_id = ?`, [req.params.id]);
   res.json({ ...customer, addresses });

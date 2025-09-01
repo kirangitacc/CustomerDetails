@@ -7,6 +7,8 @@ import './index.css';
 const CustomerForm = () => {
   const navigate = useNavigate();
   const [loading, setLoading] = useState(true);
+  const [message, setMessage] = useState({ type: '', text: '' });
+
 
   const [form, setForm] = useState({
     id: null,
@@ -78,10 +80,11 @@ const CustomerForm = () => {
         first_name: '', last_name: '', phone: '', email: '',
         addresses: [{ address_line: '', city: '', state: '', pin_code: '' }]
       });
-      alert('Customer added');
+      setMessage({ type: 'success', text: 'Customer added successfully.' });
       navigate('/customers');
     } else {
-      alert('Error submitting form');
+      const errorText = await res.text();
+      setMessage({ type: 'error', text: errorText || 'Failed to submit customer.' });
     }
   };
 
@@ -123,6 +126,11 @@ const CustomerForm = () => {
           </>
         )}
          <button className='submit-btn' type="submit" onClick={handleSubmit}>Submit</button>
+         {message.text && (
+          <div className={`form-message ${message.type}`}>
+            {message.text}
+          </div>
+         )}
       </div>
     </>
   );
