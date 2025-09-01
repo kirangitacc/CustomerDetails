@@ -4,6 +4,12 @@ A full-stack web application for managing customer records and their associated 
 
 ---
 
+# deploy link
+
+https://customer-details.vercel.app/
+
+---
+
 ## 🚀 Features
 
 - 🔐 JWT-based user authentication (register/login)
