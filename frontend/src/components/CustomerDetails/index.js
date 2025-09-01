@@ -13,7 +13,7 @@ const CustomerDetails = () => {
   useEffect(() => {
     const fetchCustomer = async () => {
       const token = localStorage.getItem('token');
-      const res = await fetch(`http://localhost:3001/customers/${id}`, {
+      const res = await fetch(`https://customerdetails-ctv2.onrender.com/customers/${id}`, {
         headers: {
           'Authorization': `Bearer ${token}`
         }
@@ -31,7 +31,7 @@ const CustomerDetails = () => {
     const confirm = window.confirm('Are you sure you want to delete this customer?');
     if (confirm) {
       const token = localStorage.getItem('token');
-      await fetch(`http://localhost:3001/customers/${id}`, {
+      await fetch(`https://customerdetails-ctv2.onrender.com/customers/${id}`, {
         method: 'DELETE',
         headers: {
           'Authorization': `Bearer ${token}`

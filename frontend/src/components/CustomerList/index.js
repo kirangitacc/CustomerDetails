@@ -18,7 +18,7 @@ const CustomerList = () => {
 
     try {
       const token = localStorage.getItem('token');
-      const response = await fetch(`http://localhost:3001/customers?${query}`, {
+      const response = await fetch(`https://customerdetails-ctv2.onrender.com/customers?${query}`, {
         method: 'GET',
         headers: {
         'Authorization': `Bearer ${token}`

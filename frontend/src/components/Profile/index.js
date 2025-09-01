@@ -20,7 +20,7 @@ const Profile = () => {
       const token = localStorage.getItem('token');
 
       try {
-        const response = await fetch(`http://localhost:3001/user/${userId}`, {
+        const response = await fetch(`https://customerdetails-ctv2.onrender.com/user/${userId}`, {
           method: 'GET',
           headers: {
             Authorization: `Bearer ${token}`,

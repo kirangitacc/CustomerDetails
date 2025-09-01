@@ -58,8 +58,8 @@ const CustomerForm = () => {
     const token = localStorage.getItem('token');
     const isEdit = !!form.id;
     const url = isEdit
-      ? `http://localhost:3001/customers/${form.id}`
-      : 'http://localhost:3001/customers';
+      ? `https://customerdetails-ctv2.onrender.com/customers/${form.id}`
+      : 'https://customerdetails-ctv2.onrender.com/customers';
 
     const method = isEdit ? 'PUT' : 'POST';
 
